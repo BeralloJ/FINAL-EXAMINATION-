@@ -1,0 +1,18 @@
+public class Main
+{
+	public static void main(String[]orgs){
+		Customer Customer;
+		RegularCustomer RegularCustomer = new RegularCustomer("paps", 1000);
+		SeniorCustomer  SeniorCustomer = new SeniorCustomer("mams", 1300);
+
+		Customer = RegularCustomer;
+
+
+		System.out.println(Customer.calculateBill() + "\t" + Customer.getName() + ".");
+
+		Customer = SeniorCustomer;
+
+
+		System.out.println(Customer.calculateBill() + "\t" + Customer.getName() + ".");
+    }
+}
