@@ -1,19 +1,22 @@
 
-public class Main
+public class Customer
 {
-	public static void main(String[]orgs){
-		Customer Customer;
-		RegularCustomer RegularCustomer = new RegularCustomer("paps", 1000);
-		SeniorCustomer  SeniorCustomer = new SeniorCustomer("mams", 1000);
+	private String name;
+    double amount;
 
-		Customer = RegularCustomer;
-
-
-		System.out.println(Customer.calculateBill() + "\t" + Customer.getName() + ".");
-
-		Customer = SeniorCustomer;
-
-
-		System.out.println(Customer.calculateBill() + "\t" + Customer.getName() + ".");
+    //Constructor
+    public Customer(String name, int amount){
+        this.name = name;
+        this.amount = amount;
     }
+
+    //Method
+    public abstract double calculateBill();
+
+    public String getName(){
+        return name;
+    }
+    public void setName(){
+        this.name = name;
+	}
 }
